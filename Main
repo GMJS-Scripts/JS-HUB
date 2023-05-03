@@ -659,9 +659,9 @@ function JSLib:MakeWindow(WindowConfig)
 	end)
 
 AddConnection(UserInputService.InputBegan, function(Input)
-	if Input.KeyCode == Enum.KeyCode.RightShift and UIHidden then
+	if Input.KeyCode == Enum.KeyCode.RightShift and UIHidden == true then
 		MainWindow.Visible = true
-	elseif Input.KeyCode == Enum.KeyCode.RightShift then
+	elseif Input.KeyCode == Enum.KeyCode.RightShift and UIHidden == false then
 		MainWindow.Visible = false
 	end
 end)

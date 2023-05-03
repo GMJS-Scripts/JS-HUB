@@ -3,10 +3,8 @@ This documentation is for the stable release of JS Library.
 
 ## Booting the Library
 ```lua
-local JSLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/JS/main/source')))()
+local JSLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/GMJS-Scripts/JS-HUB/main/Main')))()
 ```
-
-
 
 ## Creating a Window
 ```lua

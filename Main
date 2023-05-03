@@ -653,7 +653,7 @@ function JSLib:MakeWindow(WindowConfig)
 		JSLib:MakeNotification({
 			Name = "Interface Hidden",
 			Content = "Tap RightShift to reopen the interface",
-			Time = 5
+			Time = 3
 		})
 		WindowConfig.CloseCallback()
 	end)
@@ -662,9 +662,19 @@ AddConnection(UserInputService.InputBegan, function(Input)
 	if Input.KeyCode == Enum.KeyCode.RightShift and UIHidden == true then
 		MainWindow.Visible = true
 		UIHidden = false
+		JSLib:MakeNotification({
+			Name = "Interface Hidden",
+			Content = "Tap RightShift to Close/Open interface",
+			Time = 3
+		})
 	elseif Input.KeyCode == Enum.KeyCode.RightShift and UIHidden == false then
 		MainWindow.Visible = false
 		UIHidden = true
+		JSLib:MakeNotification({
+			Name = "Interface Hidden",
+			Content = "Tap RightShift to Close/Open interface",
+			Time = 3
+		})
 	end
 end)
 
